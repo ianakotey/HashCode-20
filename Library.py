@@ -6,14 +6,12 @@ scores = [1, 2, 3, 4, 5]
 class Library:
     '''Class to hold library data'''
 
-    def __init__(self, booksList, signUp, numberOfBooks, booksPerDay):
+    def __init__(self, booksList, signUp, numberOfBooks, booksPerDay, libraryId):
         self.booksList = booksList
         self.signUp = signUp
         self.numberOfBooks = numberOfBooks
         self.booksPerDay = booksPerDay
-        self.tScore = self.totalScore()
-        self.tDays = self.totalDays()
-        self.tRatio = self.ratio()
+        self.libraryId = libraryId
         self.tScore = self.totalScore()
         self.tDays = self.totalDays()
         self.tRatio = self.ratio()
