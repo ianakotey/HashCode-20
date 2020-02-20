@@ -1,4 +1,5 @@
 from itertools import islice
+from 
 
 def parsedata(filepath):
     with( open(filepath, 'r' ) ) as file:
