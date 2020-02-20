@@ -28,7 +28,7 @@ def parsedata(filepath):
 
             booksList = map(lambda x:eval(x), data.split() )
 
-            libraryData = Library(booksList=booksList, signUp=signUp, numberOfBooks=numberOfBooks, booksPerDay=booksPerDay)
+            libraryData = Library(booksList=booksList, signUp=signUp, numberOfBooks=numberOfBooks, booksPerDay=booksPerDay, scores=scores)
             
             libraries.append(libraryData)
 
