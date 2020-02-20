@@ -4,12 +4,13 @@ import math
 class Library:
     '''Class to hold library data'''
 
-    def __init__(self, booksList, signUp, numberOfBooks, booksPerDay, scores):
+    def __init__(self, booksList, signUp, numberOfBooks, booksPerDay, scores, libraryId):
         self.booksList = booksList
         self.signUp = signUp
         self.numberOfBooks = numberOfBooks
         self.booksPerDay = booksPerDay
         self.scores = scores
+        self.libraryId = libraryId
         self.tScore = self.totalScore()
         self.tDays = self.totalDays()
         self.tRatio = self.ratio()
