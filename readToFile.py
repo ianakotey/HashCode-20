@@ -13,23 +13,23 @@ def parsedata(filepath):
         # print(scores, type(scores[0]))
         
         libraries = []
-        sampleLibrary = {}
 
         while True:
-            libraryData = {}
 
             # read the first line of library data
             data = file.readline()
             if not data: break
 
-            libraryData['numberOfBooks'], libraryData['signupDays'], libraryData['booksPerDay'] = map(lambda x:eval(x), data.split() )
+            numberOfBooks, signUp, booksPerDay = map(lambda x:eval(x), data.split() )
 
             # read the second line of library data
             data = file.readline()
             if not data: break
 
-            libraryData['libraryBooks'] = map(lambda x:eval(x), data.split() )
+            booksList = map(lambda x:eval(x), data.split() )
 
+            libraryData = Library(booksList=booksList, signUp=signUp, numberOfBooks=numberOfBooks, booksPerDay=booksPerDay)
+            
             libraries.append(libraryData)
 
 
