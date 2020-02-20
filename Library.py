@@ -1,5 +1,6 @@
 import math
 
+
 class Library:
     '''Class to hold library data'''
 
@@ -11,6 +12,7 @@ class Library:
         self.scores = scores
         self.tScore = self.totalScore()
         self.tDays = self.totalDays()
+        self.tRatio = self.ratio()
 
     def totalDays(self) -> int:
         return (math.ceil(self.numberOfBooks / self.booksPerDay) + self.signUp)
@@ -26,7 +28,7 @@ class Library:
 
 
 if __name__ == "__main__":
-    lib = Library([0, 2, 3], 3, 3, 2, [0,1,2, 3])
+    lib = Library([0, 2, 3], 3, 3, 2, [0, 1, 2, 3])
     print(lib.totalDays())
     print(lib.totalScore())
     print(lib.ratio())
