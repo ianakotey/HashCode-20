@@ -33,6 +33,8 @@ def parsedata(filepath):
 
             booksList = list(map(lambda x: eval(x), data.split()))
 
+            booksList.sort(key=lambda book: scores[book], reverse=True)
+
             libraryData = Library(booksList=booksList, signUp=signUp, numberOfBooks=numberOfBooks,
                                   booksPerDay=booksPerDay, scores=scores, libraryId=currentId)
 
