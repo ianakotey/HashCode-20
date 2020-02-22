@@ -1,15 +1,16 @@
 def saveTofile(filename: str, orderedLibraries: list):
-    addBooks = []
-    with open(filename, mode='a') as file:
+    addedBooks = []
+    currentBooks = []
+    with open(filename, mode='w') as file:
         file.write(f'{len(orderedLibraries)}\n')
         for library in orderedLibraries:
-
-            books = ' '.join(list(map(lambda x: str(x), library.booksList)))
+            currentBooks = list(
+                filter(lambda x: x not in addedBooks, library.booksList))
+            books = ' '.join(list(map(lambda x: str(x), currentBooks)))
 
             file.write(
                 f'{library.libraryId} {len(library.booksList)}\n{ books } \n'
             )
 
-            books = ""
-            for t in library.booksList:
-                addBooks.append(t)
+            for t in currentBooks:
+                addedBooks.append(t)

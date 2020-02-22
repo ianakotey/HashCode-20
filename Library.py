@@ -25,7 +25,7 @@ class Library:
         return self.totalScore()/self.totalDays()
 
     def __repr__(self):
-        return f'\n\tLibrary: \t numberOfBooks: {self.numberOfBooks} \t No. of Signup days: {self.signUp} \t booksPerDay: {self.booksPerDay} \t Total book score: {self.tScore} \n'
+        return f'\n\tLibrary: \t numberOfBooks: {self.numberOfBooks} \t No. of Signup days: {self.signUp} \t booksPerDay: {self.booksPerDay} \t Total book score: {self.tScore}  \t Ratio: {self.tRatio}\n'
 
 
 if __name__ == "__main__":

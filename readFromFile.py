@@ -23,8 +23,6 @@ def parsedata(filepath):
             data = file.readline()
             if not data.strip():
                 break
-
-            print(data)
             numberOfBooks, signUp, booksPerDay = map(
                 lambda x: eval(x), data.split())
 
